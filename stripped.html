@@ -1,0 +1,610 @@
+<title>Валерия Шпортко — портфолио</title>
+<meta name="description" content="Обложечные тексты и аннотации для книг нонфикшна, аналитическая статья об истории моды. Портфолио редактора Валерии Шпортко." />
+<style>
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+@font-face {
+  font-family: 'Golos Text';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+@font-face {
+  font-family: 'Spectral';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(DATA) format('woff2');
+}
+
+:root{
+  --paper:#fbfaf8;
+  --paper-raised:#ffffff;
+  --ink:#111111;
+  --ink-soft:#45444a;
+  --ink-faint:#84838a;
+  --rule:#dedad0;
+  --accent:#af1955;
+  --accent-ink:#ffffff;
+  --accent2:#1f5c4d;
+  --accent2-ink:#f5f1ea;
+  --shadow: 0 1px 2px rgba(17,17,17,0.05), 0 12px 32px rgba(17,17,17,0.09);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#111011;
+    --paper-raised:#1b1a1b;
+    --ink:#f6f5f1;
+    --ink-soft:#c4c2bb;
+    --ink-faint:#8c8a84;
+    --rule:#312f2e;
+    --accent:#ff5f97;
+    --accent-ink:#161616;
+    --accent2:#3fae8f;
+    --accent2-ink:#0b1613;
+    --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 32px rgba(0,0,0,0.4);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111011; --paper-raised:#1b1a1b; --ink:#f6f5f1; --ink-soft:#c4c2bb; --ink-faint:#8c8a84;
+  --rule:#312f2e; --accent:#ff5f97; --accent-ink:#161616;
+  --accent2:#3fae8f; --accent2-ink:#0b1613;
+  --shadow: 0 1px 2px rgba(0,0,0,0.4), 0 12px 32px rgba(0,0,0,0.4);
+}
+:root[data-theme="light"]{
+  --paper:#fbfaf8; --paper-raised:#ffffff; --ink:#111111; --ink-soft:#45444a; --ink-faint:#84838a;
+  --rule:#dedad0; --accent:#af1955; --accent-ink:#ffffff;
+  --accent2:#1f5c4d; --accent2-ink:#f5f1ea;
+  --shadow: 0 1px 2px rgba(17,17,17,0.05), 0 12px 32px rgba(17,17,17,0.09);
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto;} *{animation:none !important; transition:none !important;} }
+
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Golos Text', ui-sans-serif, system-ui, sans-serif;
+  font-size:18px;
+  line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+a{ color:var(--accent); text-decoration-thickness:1.5px; text-underline-offset:3px; }
+a:focus-visible, button:focus-visible, dialog:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; }
+
+.wrap{ max-width:960px; margin:0 auto; padding:0 28px; }
+
+/* ---- top nav ---- */
+.topnav{
+  position:sticky; top:0; z-index:20;
+  background:color-mix(in srgb, var(--paper) 85%, transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.topnav-inner{ max-width:960px; margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.topnav-name{ font-weight:700; font-size:14.5px; letter-spacing:.02em; }
+.topnav-links{ display:flex; gap:26px; list-style:none; margin:0; padding:0; }
+.topnav-links a{ font-size:14.5px; font-weight:500; color:var(--ink-soft); text-decoration:none; }
+.topnav-links a:hover{ color:var(--accent); }
+
+/* ---- hero ---- */
+.hero{ padding:76px 0 46px; display:grid; grid-template-columns:1fr 300px; gap:40px 44px; align-items:start; }
+.hero-text{ min-width:0; }
+.hero-photo img{ width:100%; height:auto; display:block; box-shadow:var(--shadow); }
+@media (max-width:760px){
+  .hero{ grid-template-columns:1fr; }
+  .hero-photo{ width:200px; margin:0 0 28px; }
+}
+.kicker{
+  font-size:13.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--accent); display:flex; align-items:center; gap:10px; margin:0 0 20px;
+}
+.kicker::before{ content:""; width:30px; height:3px; background:var(--accent); display:inline-block; border-radius:1px; }
+
+h1.name{
+  font-family:'Spectral'; font-weight:700; font-style:normal;
+  font-size:clamp(42px, 8.4vw, 80px);
+  line-height:1.08; margin:0 0 26px; text-wrap:balance; letter-spacing:-0.01em;
+  color:var(--accent);
+}
+.name-row{ display:flex; align-items:baseline; flex-wrap:wrap; column-gap:14px; }
+.age{ font-family:'Golos Text'; font-size:16px; font-weight:600; color:var(--ink-faint); letter-spacing:.02em; }
+.role-primary{ font-size:24px; font-weight:700; color:var(--ink); margin:0 0 4px; }
+.role-secondary{ font-size:14.5px; font-weight:500; color:var(--ink-faint); margin:0 0 18px; letter-spacing:.01em; }
+.role-line{ font-size:18px; color:var(--ink-soft); margin:0 0 32px; max-width:52ch; text-wrap:balance; }
+
+.credibility{
+  display:flex; flex-wrap:wrap; gap:12px 30px;
+  font-size:14.5px; color:var(--ink-faint);
+  padding-top:26px; border-top:1px solid var(--rule);
+}
+.credibility b{ color:var(--ink); font-weight:700; }
+
+/* ---- section shell ---- */
+section{ padding:60px 0; border-top:1px solid var(--rule); }
+.section-head{ margin-bottom:32px; }
+.section-num{
+  display:block; font-weight:600; font-size:13.5px;
+  color:var(--accent); letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px;
+}
+h2{
+  font-family:'Spectral'; font-weight:700; font-size:clamp(28px,4.4vw,40px); margin:0;
+  letter-spacing:-.01em; text-wrap:balance; color:var(--accent);
+}
+
+/* ---- about ---- */
+.about-block{ margin-top:26px; }
+.about-block:first-child{ margin-top:0; }
+.about-label{
+  display:inline-block; font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--accent2-ink); background:var(--accent2); padding:4px 10px; border-radius:3px; margin:0 0 10px;
+}
+.about-block p{ max-width:62ch; font-size:19px; color:var(--ink); margin:0; }
+
+/* ---- works intro ---- */
+.works-intro{ max-width:60ch; color:var(--ink-soft); font-size:18px; margin:0 0 8px; }
+
+/* ---- work entry ---- */
+.work{ display:grid; grid-template-columns: 176px 1fr; gap:28px; padding:42px 0; border-top:1px solid var(--rule); }
+.work:first-of-type{ border-top:none; padding-top:8px; }
+@media (max-width:640px){ .work{ grid-template-columns:1fr; gap:14px; } }
+
+.work-meta{ font-size:13px; color:var(--ink-faint); line-height:1.7; }
+.work-meta .edition{ color:var(--ink-soft); font-weight:600; display:block; margin-bottom:6px; }
+.work-meta .isbn{ display:block; }
+
+.work-title{ margin:0 0 8px; font-size:28px; font-weight:700; text-wrap:balance; }
+.work-subtitle{ color:var(--ink-soft); font-size:0.62em; font-weight:400; letter-spacing:0; }
+.work-author{ font-size:13px; color:var(--ink-faint); font-weight:600; letter-spacing:.02em; text-transform:uppercase; margin:0 0 4px; }
+
+
+.work-block{ margin-top:20px; }
+.work-block p{ margin:0; max-width:58ch; color:var(--ink); }
+
+.flip-btn{
+  display:inline-flex; align-items:center; gap:8px;
+  margin-top:22px; padding:10px 18px;
+  font-weight:700; font-size:14.5px; color:var(--ink);
+  background:transparent; border:1.5px solid var(--ink); border-radius:8px;
+  cursor:pointer; transition:background .15s ease, color .15s ease, border-color .15s ease;
+}
+.flip-btn:hover{ background:var(--accent2); border-color:var(--accent2); color:var(--accent2-ink); }
+.flip-btn svg{ width:15px; height:15px; }
+
+/* ---- cover modal ---- */
+dialog.cover-modal{
+  border:none; border-radius:14px; padding:0; background:var(--paper-raised);
+  box-shadow:0 24px 64px rgba(0,0,0,0.35);
+  max-width:min(92vw, 820px); max-height:88vh; width:100%;
+}
+dialog.cover-modal::backdrop{ background:rgba(10,10,10,0.72); backdrop-filter:blur(2px); }
+.modal-head{ display:flex; align-items:center; justify-content:space-between; padding:16px 20px; border-bottom:1px solid var(--rule); }
+.modal-title{ font-weight:700; font-size:15px; }
+.modal-close{
+  border:none; background:var(--rule); color:var(--ink); width:32px; height:32px; border-radius:50%;
+  cursor:pointer; font-size:16px; line-height:1; display:flex; align-items:center; justify-content:center;
+}
+.modal-close:hover{ background:var(--accent); color:#fff; }
+.modal-body{ padding:20px; overflow:auto; max-height:calc(88vh - 130px); text-align:center; }
+.modal-body img{ max-width:100%; height:auto; border-radius:4px; display:block; margin:0 auto; }
+.modal-nav{ display:flex; align-items:center; justify-content:space-between; padding:14px 20px; border-top:1px solid var(--rule); }
+.modal-nav button{
+  border:1.5px solid var(--rule); background:none; color:var(--ink); padding:8px 16px; border-radius:8px;
+  font-weight:600; font-size:13.5px; cursor:pointer;
+}
+.modal-nav button:hover{ border-color:var(--accent); color:var(--accent); }
+.modal-nav button:disabled{ opacity:.35; cursor:default; }
+.modal-nav button:disabled:hover{ border-color:var(--rule); color:var(--ink); }
+.modal-page-label{ font-size:13px; color:var(--ink-faint); }
+.modal-imgset img{ display:none; }
+.modal-imgset img.is-active{ display:block; }
+
+/* ---- contact ---- */
+.contact{ display:flex; flex-wrap:wrap; gap:30px 44px; align-items:flex-start; list-style:none; margin:0; padding:0; }
+.contact-item dt{ font-size:12px; font-weight:700; letter-spacing:.09em; text-transform:uppercase; color:var(--ink-faint); margin:0 0 7px; }
+.contact-item dd{ margin:0; font-size:20px; font-weight:600; }
+.contact-item a{ color:var(--ink); text-decoration-color:var(--rule); }
+.contact-item a:hover{ color:var(--accent); text-decoration-color:var(--accent); }
+
+footer{ padding:38px 0 64px; font-size:13px; color:var(--ink-faint); display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+</style>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <span class="topnav-name">В. Шпортко</span>
+    <ul class="topnav-links">
+      <li><a href="#about">О себе</a></li>
+      <li><a href="#works">Кейсы</a></li>
+      <li><a href="#contact">Контакты</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="wrap">
+
+  <header class="hero">
+    <div class="hero-text">
+      <p class="kicker">Портфолио</p>
+      <h1 class="name">
+        <span class="name-row">Валерия</span>
+        <span class="name-row">Шпортко<span class="age">25 лет</span></span>
+      </h1>
+      <p class="role-primary">Редактор</p>
+      <p class="role-secondary">Также: пишущий редактор, выпускающий редактор</p>
+      <p class="role-line">Редактирую тексты, выстраиваю структуру будущей книги, придумываю название и обложку. Ещё пишу для изданий — от аннотации до аналитической статьи.</p>
+      <div class="credibility">
+        <span>Более <b>50</b> книжных проектов</span>
+        <span><b>15</b> книг — от рукописи до обложки</span>
+        <span><b>1</b> выпуск газеты — от идеи до печати</span>
+      </div>
+    </div>
+    <div class="hero-photo">
+      <img src="DATA" width="900" height="1124" alt="Валерия Шпортко">
+    </div>
+  </header>
+
+  <section id="about" class="about">
+    <div class="section-head">
+      <span class="section-num">01 — О себе</span>
+      <h2>Собираю книгу с нуля до полки</h2>
+    </div>
+    <div class="about-block">
+      <span class="about-label">Кто я</span>
+      <p>Редактор и менеджер проектов в издательстве «Комсомольская правда». За время работы подготовила к печати пятнадцать книг полным циклом — от редактуры рукописи и подготовки к вёрстке до финальной обложки. Курирую практически весь портфель издателя: проверяю смысловые нестыковки и юридические риски — всё, что не должно попасть в тираж. Для многих других проектов пишу или дорабатываю аннотации и тексты для обложек.</p>
+    </div>
+    <div class="about-block">
+      <span class="about-label">Задачи</span>
+      <p>Редактирую рукописи, выстраивая структуру и стиль текста от чернового варианта до финальной вычитки. Контролирую дедлайны и качество работы подрядчиков (редакторы, дизайнеры, корректоры, иллюстраторы, бильд-редакторы и т. д.) и авторов на каждом этапе работы — от подписания авторского договора до сдачи материалов в печать.</p>
+    </div>
+    <div class="about-block">
+      <span class="about-label">Образование</span>
+      <p>Учусь на факультете журналистики РУДН с 2024 года. В январе 2026 года собрала выпуск студенческой газеты «En Bref» как главный редактор: пересобрала структуру нескольких статей целиком, довела чужие тексты до цельного вида и написала для номера собственную аналитическую статью об истории моды.</p>
+    </div>
+  </section>
+
+  <section id="works">
+    <div class="section-head">
+      <span class="section-num">02 — Кейсы</span>
+      <h2>На полке</h2>
+    </div>
+
+    <p class="works-intro">Некоторые издания, которые были у меня в работе. Где-то это полная работа с рукописью — структура и стиль текста; где-то — точечный текст для обложки и аннотации, которые формируют первое впечатление о книге у читателя.</p>
+
+    
+    <div class="work">
+      <div class="work-meta">
+        <span class="edition">Издание №01</span>
+        <span class="isbn">ISBN 978-5-4470-0783-6</span>
+        <span class="isbn">Комсомольская правда</span>
+      </div>
+      <div>
+        <h3 class="work-title">«Сад мечты моей»<span class="work-subtitle">: неспешное создание своего места силы</span></h3>
+        <p class="work-author">Мария Евсеева</p>
+        <div class="work-block">
+          <p>Литературная редактура рукописи: структура, стиль, подготовка текста к вёрстке. Для обложки разработала название, подзаголовок, аннотацию и выносы. Стартовый тираж — 3000 экземпляров, затем две допечатки по 1000 экземпляров каждая.</p>
+        </div>
+        <button class="flip-btn" data-target="modal-sad" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+          Обложка и развороты книги
+        </button>
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="work-meta">
+        <span class="edition">Издание №02</span>
+        <span class="isbn">ISBN 978-5-4470-0769-0</span>
+        <span class="isbn">Комсомольская правда</span>
+      </div>
+      <div>
+        <h3 class="work-title">«Записки о счастливой жизни»<span class="work-subtitle">: идеальные ингредиенты неидеальных дней</span></h3>
+        <p class="work-author">Катя Каплар</p>
+        <div class="work-block">
+          <p>Литературная редактура рукописи: структура, стиль, подготовка текста к вёрстке. Для обложки разработала название, подзаголовок, аннотацию от лица автора и выносы.</p>
+        </div>
+        <button class="flip-btn" data-target="modal-zapiski" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+          Обложка и развороты книги
+        </button>
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="work-meta">
+        <span class="edition">Издание №03</span>
+        <span class="isbn">ISBN 978-5-4470-0781-2</span>
+        <span class="isbn">Комсомольская правда</span>
+      </div>
+      <div>
+        <h3 class="work-title">«Сильный. Слабый. Маяковский.»<span class="work-subtitle">: и женщины, без которых он не смог жить</span></h3>
+        <p class="work-author">Денис Корсаков</p>
+        <div class="work-block">
+          <p>Литературная редактура рукописи: структура, стиль, подготовка текста к вёрстке. Подбирала стихи Маяковского под мотив издания. Для обложки разработала название, аннотацию и выносы.</p>
+        </div>
+        <button class="flip-btn" data-target="modal-mayakovsky" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+          Обложка и развороты книги
+        </button>
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="work-meta">
+        <span class="edition">Издание №04</span>
+        <span class="isbn">ISBN 978-5-4470-0824-6</span>
+        <span class="isbn">Комсомольская правда</span>
+      </div>
+      <div>
+        <h3 class="work-title">«Корзина рукодельницы»<span class="work-subtitle">: рецепты, выкройки и душевный декор из природных материалов</span></h3>
+        <p class="work-author">Валерия Жемчужникова</p>
+        <div class="work-block">
+          <p>Литературная редактура рукописи потребовала глубокой переработки текста — от структуры до языка, при сохранении авторского замысла и голоса. Для обложки разработала название, подзаголовок, аннотацию и выносы.</p>
+        </div>
+        <button class="flip-btn" data-target="modal-korzina" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+          Обложка и развороты книги
+        </button>
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="work-meta">
+        <span class="edition">Издание №05</span>
+        <span class="isbn">ISBN 978-5-4470-0818-5</span>
+        <span class="isbn">Комсомольская правда</span>
+      </div>
+      <div>
+        <h3 class="work-title">«Тропинка к творчеству»<span class="work-subtitle">: рукотворная уютная жизнь</span></h3>
+        <p class="work-author">Дарья Левина</p>
+        <div class="work-block">
+          <p>Третья книга автора бестселлеров «Книга вдохновения» и «Романтика дачи». Важно было сохранить узнаваемый почерк серии и одновременно показать, чем именно эта книга отличается от предыдущих. Разработала текст аннотации для задней обложки. Название, подзаголовок и текст у корешка утверждены издательством до подключения к проекту.</p>
+        </div>
+        <button class="flip-btn" data-target="modal-tropinka" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+          Посмотреть обложку
+        </button>
+      </div>
+    </div>
+
+    <div class="work">
+      <div class="work-meta">
+        <span class="edition">Издание №06</span>
+        <span class="isbn">Газета «En Bref»</span>
+        <span class="isbn">Январь 2026</span>
+      </div>
+      <div>
+        <h3 class="work-title">«Изобретая моду»<span class="work-subtitle">: кто и как формировал язык в индустрии</span></h3>
+        <p class="work-author">Аналитическая статья</p>
+        <div class="work-block">
+          <p>Аналитическая статья для университетской газеты «En Bref». Сознательно выбрала три фигуры, определившие язык моды на десятилетия вперёд, и провела линию от их архивных коллекций к языку сегодняшнего подиума.</p>
+        </div>
+        <button class="flip-btn" data-target="modal-moda" type="button">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg>
+          Посмотреть обложку
+        </button>
+      </div>
+    </div>
+
+  </section>
+
+  <section id="contact">
+    <div class="section-head">
+      <span class="section-num">03 — Контакты</span>
+      <h2>Связь со мной</h2>
+    </div>
+    <dl class="contact">
+      <div class="contact-item">
+        <dt>Почта</dt>
+        <dd><a href="mailto:valeria.voytova@gmail.com">valeria.voytova@gmail.com</a></dd>
+      </div>
+      <div class="contact-item">
+        <dt>Телеграм</dt>
+        <dd><a href="https://t.me/idrinkonlywater">@idrinkonlywater</a></dd>
+      </div>
+      <div class="contact-item">
+        <dt>Инстаграм</dt>
+        <dd><a href="https://instagram.com/fuckityfuckthisshit">@fuckityfuckthisshit</a></dd>
+      </div>
+      <div class="contact-item">
+        <dt>Город</dt>
+        <dd>Москва</dd>
+      </div>
+    </dl>
+  </section>
+
+  <footer>
+    <span>Валерия Шпортко © 2026</span>
+    <span>Портфолио · редактор</span>
+  </footer>
+
+</div>
+
+
+<dialog class="cover-modal" id="modal-sad">
+  <div class="modal-head">
+    <span class="modal-title">Сад мечты моей</span>
+    <button class="modal-close" type="button" aria-label="Закрыть">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-imgset">
+      <img src="DATA" alt="Разворот обложки «Сад мечты моей»: передняя и задняя сторона, корешок" width="1500" height="930">
+      <img src="DATA" alt="Разворот книги «Сад мечты моей»: глава «С чего начинается сад»" width="1500" height="972">
+      <img src="DATA" alt="Разворот книги «Сад мечты моей»: глава «Кустарники июня»" width="1500" height="972">
+      <img src="DATA" alt="Разворот книги «Сад мечты моей»: страница о флоксах и эхинацее" width="1500" height="972">
+    </div>
+  </div>
+      <div class="modal-nav">
+        <button class="modal-prev" type="button">← Назад</button>
+        <span class="modal-page-label"></span>
+        <button class="modal-next" type="button">Вперёд →</button>
+      </div>
+</dialog>
+
+<dialog class="cover-modal" id="modal-zapiski">
+  <div class="modal-head">
+    <span class="modal-title">Записки о счастливой жизни</span>
+    <button class="modal-close" type="button" aria-label="Закрыть">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-imgset">
+      <img src="DATA" alt="Передняя обложка «Записки о счастливой жизни»" width="1000" height="1500">
+      <img src="DATA" alt="Задняя обложка «Записки о счастливой жизни»" width="1000" height="1500">
+      <img src="DATA" alt="Разворот книги «Записки о счастливой жизни»: «Для чего этот блокнот?»" width="1500" height="1124">
+      <img src="DATA" alt="Разворот книги «Записки о счастливой жизни»: глава «Завтраки»" width="1500" height="1124">
+      <img src="DATA" alt="Разворот книги «Записки о счастливой жизни»: «Цветочные композиции»" width="1500" height="1124">
+    </div>
+  </div>
+      <div class="modal-nav">
+        <button class="modal-prev" type="button">← Назад</button>
+        <span class="modal-page-label"></span>
+        <button class="modal-next" type="button">Вперёд →</button>
+      </div>
+</dialog>
+
+<dialog class="cover-modal" id="modal-mayakovsky">
+  <div class="modal-head">
+    <span class="modal-title">Сильный. Слабый. Маяковский.</span>
+    <button class="modal-close" type="button" aria-label="Закрыть">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-imgset">
+      <img src="DATA" alt="Разворот обложки «Сильный. Слабый. Маяковский.»: передняя и задняя сторона, корешок" width="1500" height="918">
+      <img src="DATA" alt="Разворот книги: биография Лили Брик" width="1500" height="972">
+      <img src="DATA" alt="Разворот книги: разворот со стихотворением «Про это»" width="1500" height="972">
+      <img src="DATA" alt="Разворот книги: письма и телеграммы Маяковского" width="1500" height="972">
+    </div>
+  </div>
+      <div class="modal-nav">
+        <button class="modal-prev" type="button">← Назад</button>
+        <span class="modal-page-label"></span>
+        <button class="modal-next" type="button">Вперёд →</button>
+      </div>
+</dialog>
+
+<dialog class="cover-modal" id="modal-korzina">
+  <div class="modal-head">
+    <span class="modal-title">Корзина рукодельницы</span>
+    <button class="modal-close" type="button" aria-label="Закрыть">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-imgset">
+      <img src="DATA" alt="Разворот обложки «Корзина рукодельницы»: передняя и задняя сторона, корешок" width="1500" height="927">
+      <img src="DATA" alt="Разворот книги: рецепт печенья «Птичьи гнезда»" width="1500" height="972">
+      <img src="DATA" alt="Разворот книги: мастер-класс «Таблички для рассады»" width="1500" height="972">
+      <img src="DATA" alt="Разворот книги: рецепт «Чай из трав и ягод»" width="1500" height="972">
+    </div>
+  </div>
+      <div class="modal-nav">
+        <button class="modal-prev" type="button">← Назад</button>
+        <span class="modal-page-label"></span>
+        <button class="modal-next" type="button">Вперёд →</button>
+      </div>
+</dialog>
+
+<dialog class="cover-modal" id="modal-tropinka">
+  <div class="modal-head">
+    <span class="modal-title">Тропинка к творчеству</span>
+    <button class="modal-close" type="button" aria-label="Закрыть">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-imgset">
+      <img src="DATA" alt="Разворот обложки «Тропинка к творчеству»: передняя и задняя сторона, корешок" width="1500" height="864">
+    </div>
+  </div>
+</dialog>
+
+<dialog class="cover-modal" id="modal-moda">
+  <div class="modal-head">
+    <span class="modal-title">Изобретая моду — газетная полоса</span>
+    <button class="modal-close" type="button" aria-label="Закрыть">✕</button>
+  </div>
+  <div class="modal-body">
+    <div class="modal-imgset">
+      <img src="DATA" alt="Разворот газеты «En Bref» со статьёй «Изобретая моду»" width="970" height="1500">
+    </div>
+  </div>
+</dialog>
+
+<script>
+document.querySelectorAll('.flip-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var dlg = document.getElementById(btn.dataset.target);
+    if (dlg) dlg.showModal();
+  });
+});
+document.querySelectorAll('dialog.cover-modal').forEach(function(dlg){
+  var imgs = Array.prototype.slice.call(dlg.querySelectorAll('.modal-imgset img'));
+  var idx = 0;
+  var prevBtn = dlg.querySelector('.modal-prev');
+  var nextBtn = dlg.querySelector('.modal-next');
+  var label = dlg.querySelector('.modal-page-label');
+  function render(){
+    imgs.forEach(function(im,i){ im.classList.toggle('is-active', i===idx); });
+    if (prevBtn) prevBtn.disabled = idx === 0;
+    if (nextBtn) nextBtn.disabled = idx === imgs.length - 1;
+    if (label) label.textContent = (idx+1) + ' / ' + imgs.length;
+  }
+  if (prevBtn) prevBtn.addEventListener('click', function(){ if (idx>0){ idx--; render(); } });
+  if (nextBtn) nextBtn.addEventListener('click', function(){ if (idx<imgs.length-1){ idx++; render(); } });
+  dlg.querySelectorAll('.modal-close').forEach(function(b){ b.addEventListener('click', function(){ dlg.close(); }); });
+  dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });
+  if (imgs.length) render();
+});
+</script>
