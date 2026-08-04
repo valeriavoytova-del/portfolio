@@ -63,19 +63,30 @@
   src: url(assets/fonts/golos-text-700-8.woff2) format('woff2');
 }
 @font-face {
-  font-family: 'Spectral';
+  font-family: 'Prata';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url(assets/fonts/spectral-700-9.woff2) format('woff2');
+  src: url(assets/fonts/prata-cyrillic-ext.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
 }
 @font-face {
-  font-family: 'Spectral';
+  font-family: 'Prata';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-display: swap;
-  src: url(assets/fonts/spectral-700-10.woff2) format('woff2');
+  src: url(assets/fonts/prata-cyrillic.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
+@font-face {
+  font-family: 'Prata';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(assets/fonts/prata-latin.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 
 :root{
   --paper:#fbfaf8;
@@ -164,7 +175,7 @@ a:focus-visible, button:focus-visible, dialog:focus-visible{ outline:2px solid v
 .kicker::before{ content:""; width:30px; height:3px; background:var(--accent); display:inline-block; border-radius:1px; }
 
 h1.name{
-  font-family:'Spectral'; font-weight:700; font-style:normal;
+  font-family:'Prata'; font-weight:400; font-style:normal;
   font-size:clamp(42px, 8.4vw, 80px);
   line-height:1.08; margin:0 0 26px; text-wrap:balance; letter-spacing:-0.01em;
   color:var(--accent);
@@ -191,7 +202,7 @@ section{ padding:60px 0; border-top:1px solid var(--rule); }
   color:var(--accent); letter-spacing:.1em; text-transform:uppercase; margin-bottom:12px;
 }
 h2{
-  font-family:'Spectral'; font-weight:700; font-size:clamp(28px,4.4vw,40px); margin:0;
+  font-family:'Prata'; font-weight:400; font-size:clamp(28px,4.4vw,40px); margin:0;
   letter-spacing:-.01em; text-wrap:balance; color:var(--accent);
 }
 
@@ -296,7 +307,7 @@ footer{ padding:38px 0 64px; font-size:13px; color:var(--ink-faint); display:fle
       </h1>
       <p class="role-primary">Редактор</p>
       <p class="role-secondary">Также: пишущий и выпускающий редактор</p>
-      <p class="role-workplace">Сейчас — редактор и менеджер проектов в издательском доме «Комсомольская правда»</p>
+      <p class="role-workplace">Редактор и менеджер проектов в издательском доме «Комсомольская правда»</p>
       <p class="role-line">Редактирую рукописи, продумываю и выстраиваю структуру, создаю названия и аннотации для будущих изданий.</p>
       <div class="credibility">
         <span>Более <b>30</b> проектов</span>
