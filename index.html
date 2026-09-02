@@ -157,8 +157,10 @@ a:focus-visible, button:focus-visible, dialog:focus-visible{ outline:2px solid v
 .topnav-inner{ max-width:960px; margin:0 auto; padding:16px 28px; display:flex; align-items:center; justify-content:space-between; gap:16px; }
 .topnav-name{ font-weight:700; font-size:14.5px; letter-spacing:.02em; }
 .topnav-links{ display:flex; gap:26px; list-style:none; margin:0; padding:0; }
-.topnav-links a{ font-size:14.5px; font-weight:500; color:var(--ink-soft); text-decoration:none; }
+.topnav-links a{ font-size:14.5px; font-weight:500; color:var(--ink-soft); text-decoration:none; transition:color .15s ease; }
 .topnav-links a:hover{ color:var(--accent); }
+.topnav-links a.is-current{ color:var(--accent); font-weight:700; }
+#about, #works, #contact{ scroll-margin-top:76px; }
 
 /* ---- hero ---- */
 .hero{ padding:76px 0 46px; display:grid; grid-template-columns:1fr 300px; gap:40px 44px; align-items:start; }
@@ -631,6 +633,40 @@ document.querySelectorAll('dialog.cover-modal').forEach(function(dlg){
   dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });
   if (imgs.length) render();
 });
+
+(function(){
+  var nav = document.querySelector('.topnav');
+  var items = [];
+  document.querySelectorAll('.topnav-links a[href^="#"]').forEach(function(a){
+    var el = document.getElementById(a.getAttribute('href').slice(1));
+    if (el) items.push({ link:a, el:el });
+  });
+  if (!items.length) return;
+
+  var ticking = false;
+  function update(){
+    ticking = false;
+    var offset = (nav ? nav.offsetHeight : 0) + 24;
+    var current = null;
+    var atBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 80;
+    if (atBottom) {
+      current = items[items.length - 1];
+    } else {
+      items.forEach(function(it){
+        if (it.el.getBoundingClientRect().top - offset <= 0) current = it;
+      });
+    }
+    items.forEach(function(it){
+      it.link.classList.toggle('is-current', it === current);
+      if (it === current) it.link.setAttribute('aria-current', 'true');
+      else it.link.removeAttribute('aria-current');
+    });
+  }
+  function onScroll(){ if (!ticking) { ticking = true; requestAnimationFrame(update); } }
+  window.addEventListener('scroll', onScroll, { passive:true });
+  window.addEventListener('resize', onScroll);
+  update();
+})();
 </script>
 
 </body>
